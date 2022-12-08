@@ -1,0 +1,10 @@
+<div class="col" *ngIf="landmark">
+    <div class="card" style="width: 18rem;">
+        <img src={{landmark.photo_thumb}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <!-- Make it link for the full article -->
+          <h5 class="card-title">{{landmark.title}}</h5>
+          <p class="card-text">{{landmark.short_info}}</p>
+        </div>
+      </div>
+</div>

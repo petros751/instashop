@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row" *ngIf="loading">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+    </div>
+
+    <div class="row row-cols-4" *ngIf="landmarks && landmarks.length">
+        <app-landmarks-item *ngFor="let landmark of landmarks trackBy: trackFn" [objectId]="landmark.objectId"></app-landmarks-item>
+    </div>
+</div>
